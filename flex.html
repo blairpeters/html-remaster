@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css flex</title>
+    <style>
+      .main-1 {
+        border: 1px solid black;
+        display: flex;
+        justify-content: space-between;
+        background-color: red;
+        width: 500px;
+        height: 200px;
+      }
+      .smaller {
+        border: 1px solid red;
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+      }
+      .X {
+        background-color: yellow;
+      }
+      .Y {
+            background-color: green;
+        }
+        .container {
+            display: flex;
+            /* flex-wrap: wrap; */
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .s{
+            border: 1px solid black;
+            padding: 10px;
+            width: 200px;
+            height: 150px;
+            overflow-y: auto;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="main-1">
+      <div class="smaller X">A</div>
+      <div class="smaller Y">B</div>
+    </div>
+    <div class="container">
+        <div class="s">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore accusamus dolore deserunt quidem suscipit quis sequi libero minus in laudantium! Minima beatae quam nam quod veritatis commodi cumque, maiores voluptatem!</p>
+        </div>
+        <div class="s">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla labore debitis in perferendis neque? Possimus consectetur delectus amet esse officiis vero facere ipsa ratione expedita, veritatis harum magnam in reiciendis.</p>
+        </div>
+        <div class="s">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, aperiam! Expedita ex sint enim sapiente doloremque minima ullam. Ut corporis, mollitia nulla quas explicabo assumenda amet. In odio nihil nulla!</p>
+        </div>
+        <div class="s">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi non asperiores nulla, assumenda molestias nesciunt impedit error ipsum saepe architecto suscipit praesentium molestiae deserunt ullam commodi ratione explicabo ipsam ex!</p>
+        </div>
+    </div>
+  </body>
+</html>

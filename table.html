@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styled Table</title>
+
+    <style>
+      /* General page styling */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f7fc;
+        margin: 0;
+        padding: 40px 20px;
+      }
+
+      /* Table styling */
+      table {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        border-collapse: collapse;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Table header */
+      thead {
+        background-color: #1e3a8a;
+        color: white;
+      }
+
+      th {
+        padding: 16px;
+        text-align: left;
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      /* Table cells */
+      td {
+        padding: 14px 16px;
+        border-bottom: 1px solid #e5e7eb;
+        color: #374151;
+        font-size: 14px;
+      }
+
+      /* Alternating row colors */
+      tbody tr:nth-child(even) {
+        background-color: #f1f5f9;
+      }
+
+      /* Hover effect */
+      tbody tr:hover {
+        background-color: #dbeafe;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Remove bottom border from last row */
+      tbody tr:last-child td {
+        border-bottom: none;
+      }
+
+      /* Responsive styling for small screens */
+      @media (max-width: 600px) {
+        body {
+          padding: 20px 10px;
+        }
+
+        th,
+        td {
+          padding: 10px 8px;
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>DOB</th>
+          <th>Gender</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Jane</td>
+          <td>Doe</td>
+          <td>jane@gmail.com</td>
+          <td>19-10-2008</td>
+          <td>F</td>
+        </tr>
+        <tr>
+          <td>Jane</td>
+          <td>Doe</td>
+          <td>jane@gmail.com</td>
+          <td>19-10-2008</td>
+          <td>F</td>
+        </tr>
+        <tr>
+          <td>Jane</td>
+          <td>Doe</td>
+          <td>jane@gmail.com</td>
+          <td>19-10-2008</td>
+          <td>F</td>
+        </tr>
+        <tr>
+          <td>Jane</td>
+          <td>Doe</td>
+          <td>jane@gmail.com</td>
+          <td>19-10-2008</td>
+          <td>F</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

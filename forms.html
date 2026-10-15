@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+
+    <style>
+      /* General page styling */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f1f5f9;
+        margin: 0;
+        padding: 40px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        box-sizing: border-box;
+      }
+
+      /* Form card */
+      form {
+        background-color: white;
+        width: 100%;
+        max-width: 420px;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+      }
+
+      /* Form heading using a pseudo-element */
+      form::before {
+        content: "Registration Form";
+        display: block;
+        font-size: 26px;
+        font-weight: bold;
+        color: #1e3a8a;
+        text-align: center;
+        margin-bottom: 25px;
+      }
+
+      /* Labels */
+      label {
+        display: inline-block;
+        color: #374151;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      /* Text, email, password, number and date inputs */
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="number"],
+      input[type="date"] {
+        width: 100%;
+        padding: 12px;
+        margin-top: 5px;
+        margin-bottom: 18px;
+        border: 1px solid #cbd5e1;
+        border-radius: 6px;
+        font-size: 14px;
+        box-sizing: border-box;
+        outline: none;
+        transition: border-color 0.3s, box-shadow 0.3s;
+      }
+
+      /* Input focus effect */
+      input:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+      }
+
+      /* Gender section */
+      input[type="radio"] {
+        accent-color: #2563eb;
+        margin: 0 6px 0 0;
+        cursor: pointer;
+      }
+
+      input[type="radio"] + label {
+        margin-right: 18px;
+        cursor: pointer;
+      }
+
+      /* Mobile responsiveness */
+      @media (max-width: 480px) {
+        form {
+          padding: 22px;
+        }
+
+        form::before {
+          font-size: 23px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" />
+
+      <label for="weight">Weight (kg):</label>
+      <input
+        type="number"
+        id="weight"
+        name="weight"
+        min="30"
+        max="250"
+        step="0.01"
+      />
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" />
+
+      <div class="gender">
+        <label>Gender:</label><br /><br />
+
+        <input type="radio" id="m" name="gender" value="male" />
+        <label for="m">Male</label>
+
+        <input type="radio" id="f" name="gender" value="female" />
+        <label for="f">Female</label>
+      </div>
+    </form>
+  </body>
+</html>
