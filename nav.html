@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation Bar</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+      }
+      nav {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: center;
+      }
+      .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 70%;
+        max-width: 1200px;
+      }
+      .content ul {
+        list-style: none; /*removes the bullets */
+        display: flex;
+        gap: 20px;
+      }
+      .content a {
+        text-decoration: none;
+        color: #c7bebe;
+        transition: color 0.3s;
+        text-transform: uppercase;
+      }
+      .content a:hover {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="content">
+        <div class="logo">
+          <img
+            src="images/fault-finder.png"
+            alt="logo"
+            style="width: 100px; height: 100px"
+          />
+        </div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+
+          <li><a href="#">Services</a></li>
+
+          <li><a href="#">Pricing</a></li>
+
+          <li><a href="#">Get Help</a></li>
+
+          <li><a href="#">Team</a></li>
+        </ul>
+      </div>
+    </nav>
+  </body>
+</html>
