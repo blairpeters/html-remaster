@@ -1,0 +1,33 @@
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+    
+.col{
+    border: 1px solid #000;
+    width:24%;
+}
+.p{
+    text-align: center;
+}
+
+/* Media queries */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .col{
+        width: 48%;
+        margin-bottom: 12px;
+    }
+    p{
+        color: red;
+    }
+}
+@media screen and (max-width: 767px) {
+    .col{
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    p{
+        color: blue;
+    }
+}
