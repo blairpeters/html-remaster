@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Grid Playground</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background: #f1f5f9;
+      }
+
+      .grid-box {
+        padding: 25px 15px;
+        border-radius: 12px;
+        text-align: center;
+        font-weight: 600;
+        min-height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .blue {
+        background: #dbeafe;
+        color: #1d4ed8;
+      }
+      .purple {
+        background: #ede9fe;
+        color: #6d28d9;
+      }
+      .green {
+        background: #dcfce7;
+        color: #166534;
+      }
+      .orange {
+        background: #ffedd5;
+        color: #9a3412;
+      }
+      .pink {
+        background: #fce7f3;
+        color: #9d174d;
+      }
+
+      .grid-box small {
+        font-weight: 400;
+        margin-top: 6px;
+      }
+
+      section {
+        background: white;
+        padding: 25px;
+        border-radius: 16px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 15px #00000008;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container py-5">
+      <header class="text-center mb-5">
+        <h1 class="display-5 fw-bold">Bootstrap Grid Playground</h1>
+        <p class="lead text-secondary">
+          Learn responsive layouts by experimenting with columns.
+        </p>
+      </header>
+
+      <!-- 1. Equal columns -->
+      <section>
+        <h2 class="h4 mb-3">1. Equal Columns</h2>
+        <p>What happens when every column uses <code>col</code>?</p>
+
+        <div class="row g-3">
+          <div class="col">
+            <div class="grid-box blue">Column 1</div>
+          </div>
+          <div class="col">
+            <div class="grid-box purple">Column 2</div>
+          </div>
+          <div class="col">
+            <div class="grid-box green">Column 3</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Different column sizes -->
+      <section>
+        <h2 class="h4 mb-3">2. Unequal Columns</h2>
+        <p>Bootstrap divides each row into 12 grid units.</p>
+
+        <div class="row g-3">
+          <div class="col-3">
+            <div class="grid-box orange">3/12</div>
+          </div>
+          <div class="col-6">
+            <div class="grid-box blue">6/12</div>
+          </div>
+          <div class="col-3">
+            <div class="grid-box pink">3/12</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Responsive columns -->
+      <section>
+        <h2 class="h4 mb-3">3. Responsive Columns</h2>
+        <p>
+          Full width on small screens, two columns on medium screens, and four
+          columns on large screens.
+        </p>
+
+        <div class="row g-3">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="grid-box blue">Card 1</div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="grid-box purple">Card 2</div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="grid-box green">Card 3</div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="grid-box orange">Card 4</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Sidebar layout -->
+      <section>
+        <h2 class="h4 mb-3">4. Website With a Sidebar</h2>
+
+        <div class="row g-3">
+          <aside class="col-12 col-md-4 col-lg-3">
+            <div class="grid-box purple h-100">
+              Sidebar
+              <small>col-md-4 col-lg-3</small>
+            </div>
+          </aside>
+
+          <main class="col-12 col-md-8 col-lg-9">
+            <div class="grid-box blue h-100">
+              Main Content
+              <small>col-md-8 col-lg-9</small>
+            </div>
+          </main>
+        </div>
+      </section>
+
+      <!-- 5. Nested grids -->
+      <section>
+        <h2 class="h4 mb-3">5. Nested Grids</h2>
+        <p>A row inside a column can have its own grid.</p>
+
+        <div class="row g-3">
+          <div class="col-md-8">
+            <div class="grid-box blue">
+              Main Area
+
+              <div class="row g-2 mt-3 w-100">
+                <div class="col-6">
+                  <div class="grid-box green">Nested A</div>
+                </div>
+                <div class="col-6">
+                  <div class="grid-box orange">Nested B</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="grid-box purple h-100">Right Panel</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Column offsets -->
+      <section>
+        <h2 class="h4 mb-3">6. Offsetting Columns</h2>
+        <p>
+          Use <code>offset-md-3</code> to leave three grid units empty before a
+          column.
+        </p>
+
+        <div class="row g-3">
+          <div class="col-md-6 offset-md-3">
+            <div class="grid-box pink">
+              Centered Column
+              <small>col-md-6 offset-md-3</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Automatic wrapping -->
+      <section>
+        <h2 class="h4 mb-3">7. Automatic Wrapping</h2>
+        <p>
+          Five columns of width 4 cannot all fit in a single row. Watch what
+          happens.
+        </p>
+
+        <div class="row g-3">
+          <div class="col-4"><div class="grid-box blue">1</div></div>
+          <div class="col-4"><div class="grid-box purple">2</div></div>
+          <div class="col-4"><div class="grid-box green">3</div></div>
+          <div class="col-4"><div class="grid-box orange">4</div></div>
+          <div class="col-4"><div class="grid-box pink">5</div></div>
+        </div>
+      </section>
+
+      <!-- 8. Row columns -->
+      <section>
+        <h2 class="h4 mb-3">8. Control Columns From the Row</h2>
+        <p>
+          <code>row-cols-2</code> creates two columns per row;
+          <code>row-cols-lg-4</code> creates four on large screens.
+        </p>
+
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+          <div class="col"><div class="grid-box blue">Item 1</div></div>
+          <div class="col"><div class="grid-box purple">Item 2</div></div>
+          <div class="col"><div class="grid-box green">Item 3</div></div>
+          <div class="col"><div class="grid-box orange">Item 4</div></div>
+          <div class="col"><div class="grid-box pink">Item 5</div></div>
+          <div class="col"><div class="grid-box blue">Item 6</div></div>
+        </div>
+      </section>
+
+      <!-- 9. Horizontal alignment -->
+      <section>
+        <h2 class="h4 mb-3">9. Horizontal Alignment</h2>
+        <p>
+          Try <code>justify-content-center</code>,
+          <code>justify-content-end</code> and
+          <code>justify-content-between</code>.
+        </p>
+
+        <div class="row justify-content-center g-3">
+          <div class="col-4">
+            <div class="grid-box blue">Left</div>
+          </div>
+          <div class="col-4">
+            <div class="grid-box purple">Center</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. Vertical alignment -->
+      <section>
+        <h2 class="h4 mb-3">10. Vertical Alignment</h2>
+
+        <div class="row align-items-center g-3" style="min-height: 220px">
+          <div class="col-4">
+            <div class="grid-box blue">Short</div>
+          </div>
+          <div class="col-4">
+            <div class="grid-box purple" style="min-height: 160px">Tall</div>
+          </div>
+          <div class="col-4">
+            <div class="grid-box green">Short</div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
